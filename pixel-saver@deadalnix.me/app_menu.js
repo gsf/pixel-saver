@@ -30,12 +30,6 @@ function updateAppMenu() {
 	
 	let title = win.title;
 	
-	// Not the topmost maximized window.
-	if (win !== Util.getWindow()) {
-		let app = Shell.WindowTracker.get_default().get_window_app(win);
-		title = app.get_name();
-	}
-	
 	LOG('Override title ' + title);
 	appMenu._label.set_text(title);
 	tooltip.text = title;
