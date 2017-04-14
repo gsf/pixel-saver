@@ -46,17 +46,14 @@
 const ExtensionUtils = imports.misc.extensionUtils;
 const Me = ExtensionUtils.getCurrentExtension();
 const Decoration = Me.imports.decoration;
-const Buttons = Me.imports.buttons;
 const AppMenu = Me.imports.app_menu;
 
 function init(extensionMeta) {
-	Buttons.init(extensionMeta);
 	Decoration.init(extensionMeta);
 	AppMenu.init(extensionMeta);
 }
 
 function enable() {
-	Buttons.enable();
 	Decoration.enable();
 	AppMenu.enable();
 }
@@ -64,6 +61,5 @@ function enable() {
 function disable() {
 	AppMenu.disable();
 	Decoration.disable();
-	Buttons.disable();
 }
 
